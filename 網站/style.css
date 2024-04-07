@@ -61,68 +61,31 @@ header ul{
 }
 /* CSS 響應式設計 */
 @media screen and (max-width: 768px) {
-    header ul {
-    display:none;
-   }
+  header #menu {
+    display: none;
+  }
 
-header h1{
-    left:50%;
-    transition-translateX(-50%);
-}
-.b h2{
-    font-size:40px;
-}
-.menu{
-     display:block; 
-     background-color: transparent;
-     color: #ffffff;
-     font-size: 35px;
-     position: absolute;
-     top: 15px;
-     left: 20px;
-     border:none;
-     cursor: pointer;
-}
-}
-body {
-  font-family: Arial, sans-serif;
-}
+  header .menu.active {
+    background-color: #ff6600; /* 調整開合時的按鈕顏色 */
+  }
 
-#menu-toggle {
-  display: none;
-}
+  header .menu.active + #menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    background-color: rgba(102, 7, 107, 0.958);
+    width: 100%;
+  }
 
-#menu-btn {
-  display: block;
-  cursor: pointer;
-  font-size: 24px;
-  padding: 10px;
-  background-color: #333;
-  color: #fff;
-}
+  header #menu li {
+    margin-left: 0;
+    text-align: center;
+    padding: 10px;
+  }
 
-#menu {
-  display: none;
-}
-
-#menu-toggle:checked + #menu {
-  display: block;
-}
-
-#menu ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-#menu li {
-  padding: 10px 0;
-}
-
-#menu a {
-  text-decoration: none;
-  color: #333;
-}
-
-#content {
-  padding: 20px;
+  header #menu a {
+    color: #fff;
+  }
 }
