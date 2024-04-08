@@ -4,41 +4,41 @@
 }
 header
 {
-     background-color: rgba (102, 7, 107, 0.958);
-     height: 90 px;
-     width: 100 %;
+     background-color:rgba(102, 7, 107, 0.958);
+     height: 90px;
+     width: 100%;
 }
 footer {
-    background-color: rgb (129, 129, 235);
+    background-color: rgb(129, 129, 235);
 }
 a{
     color: #ffffff;
     text-decoration: none;
-    width: 10 %;
+    width: 10%;
 }
 a:hover{
     text-decoration: underline;
 }
 h1{
     color: #f3c8f8;
-    right:4 vw;
+    right:4vw;
     top:45;
-    line-height:80 px;
+    line-height:80px;
     background-image:url(123/螢幕擷取畫面_2024-04-07_204053-removebg-preview.png);
     background-repeat: no-repeat;
     background-position: center;
-    width:210 px;
+    width:210px;
     text-indent: -9999999999999999999999999999999999999999999999999999999999999999px;
 }
 li{
     display: inline;
-    margin-right:4 vw;
+    margin-right:4vw;
 }
 header ul{
     position:absolute;
-    right:5 vw;
-    top:45 px;
-    line-height:40 px;
+    right:5vw;
+    top:45px;
+    line-height:40px;
 }
 .a{
     display:flex;
@@ -47,46 +47,40 @@ header ul{
     justify-content:center;
    background-color:aqua;
    color:beige;
-   height:85 vh;
+   height:85vh;
    background-image:url("123/螢幕擷取畫面 2024-04-07 204826.png");
    background-repeat:no-repeat;
    background-size:cover;
    background-position: center;
 }
 .b{
-    background-color: rgb (34, 0, 69);
+    background-color: rgb(34, 0, 69);
 }
 .menu{  
        display:none;
 }
-
 /* CSS 響應式設計 */
-@media  screen and (max-width: 768 px) {
-  header #menu {
-    display: none;
-  }
+@media screen and (max-width: 768px) {
+    header ul {
+    display:none;
+   }
 
-  header .menu.active {
-    background-color: #ffffff; /* 調整開合時的按鈕顏色 */
-  }
-
-  header .menu.active + #menu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 90 px;
-    right: 0;
-    background-color: rgba (102, 7, 107, 0.958);
-    width: 100 %;
-  }
-
-  header #menu li {
-    margin-left: 0;
-    text-align: center;
-    padding: 10 px;
-  }
-
-  header #menu a {
-    color: #fff;
-  }
+header h1{
+    left:50%;
+    transition-translateX(-50%);
+}
+.b h2{
+    font-size:40px;
+}
+.menu{
+     display:block; 
+     background-color: transparent;
+     color: #ffffff;
+     font-size: 35px;
+     position: absolute;
+     top: 15px;
+     left: 20px;
+     border:none;
+     cursor: pointer;
+}
 }
