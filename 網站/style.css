@@ -4,41 +4,41 @@
 }
 header
 {
-     background-color:rgba(102, 7, 107, 0.958);
-     height: 90px;
-     width: 100%;
+     background-color: rgba (102, 7, 107, 0.958);
+     height: 90 px;
+     width: 100 %;
 }
 footer {
-    background-color: rgb(129, 129, 235);
+    background-color: rgb (129, 129, 235);
 }
 a{
     color: #ffffff;
     text-decoration: none;
-    width: 10%;
+    width: 10 %;
 }
 a:hover{
     text-decoration: underline;
 }
 h1{
     color: #f3c8f8;
-    right:4vw;
+    right:4 vw;
     top:45;
-    line-height:80px;
+    line-height:80 px;
     background-image:url(123/螢幕擷取畫面_2024-04-07_204053-removebg-preview.png);
     background-repeat: no-repeat;
     background-position: center;
-    width:210px;
+    width:210 px;
     text-indent: -9999999999999999999999999999999999999999999999999999999999999999px;
 }
 li{
     display: inline;
-    margin-right:4vw;
+    margin-right:4 vw;
 }
 header ul{
     position:absolute;
-    right:5vw;
-    top:45px;
-    line-height:40px;
+    right:5 vw;
+    top:45 px;
+    line-height:40 px;
 }
 .a{
     display:flex;
@@ -47,43 +47,43 @@ header ul{
     justify-content:center;
    background-color:aqua;
    color:beige;
-   height:85vh;
+   height:85 vh;
    background-image:url("123/螢幕擷取畫面 2024-04-07 204826.png");
    background-repeat:no-repeat;
    background-size:cover;
    background-position: center;
 }
 .b{
-    background-color: rgb(34, 0, 69);
+    background-color: rgb (34, 0, 69);
 }
 .menu{  
        display:none;
 }
 
 /* CSS 響應式設計 */
-@media screen and (max-width: 768px) {
+@media  screen and (max-width: 768 px) {
   header #menu {
     display: none;
   }
 
   header .menu.active {
-    background-color: #ff6600; /* 調整開合時的按鈕顏色 */
+    background-color: #ffffff; /* 調整開合時的按鈕顏色 */
   }
 
   header .menu.active + #menu {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 90px;
+    top: 90 px;
     right: 0;
-    background-color: rgba(102, 7, 107, 0.958);
-    width: 100%;
+    background-color: rgba (102, 7, 107, 0.958);
+    width: 100 %;
   }
 
   header #menu li {
     margin-left: 0;
     text-align: center;
-    padding: 10px;
+    padding: 10 px;
   }
 
   header #menu a {
