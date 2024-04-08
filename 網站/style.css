@@ -59,6 +59,56 @@ header ul{
 .menu{  
        display:none;
 }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: rgba(102, 7, 107, 0.958);
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.menu {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+}
+
+#menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu li {
+  margin-left: 20px;
+}
+
+#menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.content {
+  padding: 20px;
+}
+
+footer {
+  background-color: rgb(129, 129, 235);
+  padding: 10px;
+  text-align: center;
+}
+
 /* CSS 響應式設計 */
 @media screen and (max-width: 768px) {
   header #menu {
