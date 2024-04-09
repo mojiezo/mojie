@@ -3,8 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mojie zo </title>
+<title>Mojie zo</title>
 <link rel="stylesheet" href="style.css">
+<style>
+  .fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
+  .fade-in.show {
+    opacity: 1;
+  }
+</style>
 </head>
 <body>
 <header> 
@@ -19,18 +28,28 @@
 </header>
 <main>
     <section class="a">
-        <p><b><i>hi!我是Mojie_zo!<br>歡迎來到Mojie_zo的網站</i></b></p>
+        <p class="fade-in">hi!我是Mojie_zo!<br>歡迎來到Mojie_zo的網站</p>
     </section>
     <section class="b">
-        <a href="https://discord.gg/FrhKbC6DUH"><img src="123/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png"alt="Mojie_zo's discord"></a>
+        <a href="https://discord.gg/FrhKbC6DUH"><img src="123/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="Mojie_zo's discord"></a>
         <a href="https://www.roblox.com/users/3383548445/profile"><img src="123/0eeeb19633422b1241f4306419a0f15f39d58de9.png" alt="Mojie_zo's roblox"></a>
         <a href="https://www.youtube.com/channel/UCW7mM9Hy959n3U8Ty970t4g"><img src="123/1384060 (1).png" alt="Mojie_zo's youtube"></a>
         <a href="https://twitter.com/ZoMojie3745"><img src="123/X_logo_2023_(white).png" alt="Mojie_zo's twitter"></a>
     </section>
-        <footer>
+    <footer>
       <p>2024 mojie zo</p>
     </footer>
 </main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const textElement = document.querySelector('.a p');
+    setTimeout(function() {
+      textElement.classList.add('show');
+    }, 2000);
+  });
+</script>
 </body>
 </html>
+
 
