@@ -3,6 +3,14 @@
     margin: 10px; /* 添加單位(px) */
 }
 body {
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+   justify-content:center;
+   background-color:aqua;
+   color:beige;
+   font-size:55px;
+   height:85vh;
     background-image: url("123/螢幕截圖 2024-05-02 152107.png");
     background-repeat: no-repeat;
     background-size: cover;
