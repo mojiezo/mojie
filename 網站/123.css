@@ -2,6 +2,12 @@
     padding: 10px; /* 添加單位(px) */
     margin: 10px; /* 添加單位(px) */
 }
+body {
+    background-image: url("123/螢幕截圖 2024-05-02 152107.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 header
 {
      background-color:#71dec1;
@@ -9,11 +15,4 @@ header
      width: 100%;
     Position:fixed;
 }
-body {
-    background-image: url("123/螢幕截圖 2024-05-02 152107.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
 
