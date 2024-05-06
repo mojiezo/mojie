@@ -10,13 +10,6 @@ background-position: center;
 }    
 header
 {     
-    position:fixed;display:flex;
-   flex-direction:column;
-   justify-content:center;
-   background-color:aqua;
-   color:beige;
-   font-size:16px;
-   height:85vh;
      background-color:#71dec1;
      height: 90px;
      width: 100%;
