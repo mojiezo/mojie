@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Roblox個人資料</title>
+</head>
+<body>
+    <div id="user-profile"></div>
+
+    <script>
+        const userId = '3383548445'; // 要查詢的使用者ID
+        const apiUrl = `https://api.roblox.com/users/${userId}`;
+
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                const userProfile = document.getElementById('user-profile');
+                userProfile.innerHTML = `
+                    <h1>${data.Username}</h1>
+                    <img src="https://www.roblox.com/bust-thumbnail/image?userId=${userId}" alt="User Avatar">
+                    <p>${data.Description}</p>
+                    <p>Email: ${data.Email || 'N/A'}</p>
+                    <p>社交媒體: <a href="${data.ProfileUrl}" target="_blank">個人檔案</a></p>
+                `;
+            })
+            .catch(error => console.error('Error fetching user data:', error));
+    </script>
+</body>
+</html>
