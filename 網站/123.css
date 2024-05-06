@@ -2,6 +2,13 @@
     padding: 10px; /* 添加單位(px) */
     margin: 10px; /* 添加單位(px) */
 }
+header
+{
+     background-color:rgba(102, 7, 107, 0.958);
+     height: 90px;
+     width: 100%;
+    Position:fixed;
+}
 body {
     background-image: url("123/螢幕截圖 2024-05-02 152107.png");
     background-repeat: no-repeat;
