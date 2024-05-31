@@ -20,3 +20,8 @@ header {
     width: 100%;
     background-image: url("123/roblox 1.png");
 }
+@media only screen and (max-width: 768px) {
+  .fade-in {
+    font-size: 0.6em; /* 在手機上調整成較小的標題大小 */
+  }
+}
