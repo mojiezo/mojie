@@ -1,88 +1,105 @@
-*{
-    padding: 10;
-    margin: 10;
+* {
+    padding: 10px; /* 添加 px 单位 */
+    margin: 10px; /* 添加 px 单位 */
 }
-header
-{
-     background-color:rgba(102, 7, 107, 0.958);
-     height: 90px;
-     width: 100%;
-    Position:fixed;
+
+header {
+    background-color: rgba(102, 7, 107, 0.958);
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
+
+header h1 {
+    margin: 0;
+}
+
 footer {
     background-color: rgb(129, 129, 235);
+    text-align: center;
+    padding: 20px;
 }
-a{
+
+a {
     color: #ffffff;
     text-decoration: none;
-    width: 10%;
 }
-a:hover{
+
+a:hover {
     text-decoration: underline;
 }
-h1{
-    color: #f3c8f8;
-    right:4vw;
-    top:45;
-    line-height:80px;
-    background-image:url(123/螢幕擷取畫面_2024-04-07_204053-removebg-preview.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    width:210px;
-    text-indent: -9999999999999999999999999999999999999999999999999999999999999999px;
-}
-li{
+
+li {
     display: inline;
-    margin-right:4vw;
+    margin-right: 4vw;
 }
-header ul{
-    position:absolute;
-    right:5vw;
-    top:45px;
-    line-height:40px;
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
-.a{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-   background-color:aqua;
-   color:beige;
-   font-size:55px;
-   height:85vh;
-   background-image:url("123/螢幕擷取畫面 2024-04-07 204826.png");
-   background-repeat:no-repeat;
-   background-size:cover;
-   background-position: center;
+
+.a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    color: beige;
+    font-size: 55px;
+    height: 85vh;
+    background-image: url("123/螢幕擷取畫面 2024-04-07 204826.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
-.b{
+
+.b {
     background-color: rgb(34, 0, 69);
+    text-align: center;
+    padding: 20px;
 }
-.menu{  
-       display:none;
+
+.menu {
+    display: none;
 }
+
 /* CSS 響應式設計 */
 @media screen and (max-width: 768px) {
-    header ul {
-    display:none;
-   }
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(102, 7, 107, 0.958);
+        position: absolute;
+        top: 90px;
+        left: 0;
+        padding: 0;
+    }
 
-header h1{
-    left:50%;
-    transition-translateX(-50%);
-}
-.b h2{
-    font-size:40px;
-}
-.menu{
-     display:block; 
-     background-color: transparent;
-     color: #ffffff;
-     font-size: 35px;
-     position: absolute;
-     top: 15px;
-     left: 20px;
-     border:none;
-     cursor: pointer;
-}
+    header nav ul.active {
+        display: flex;
+    }
+
+    header nav ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu {
+        display: block;
+        background-color: transparent;
+        color: #ffffff;
+        font-size: 35px;
+        border: none;
+        cursor: pointer;
+    }
 }
