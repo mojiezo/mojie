@@ -12,8 +12,10 @@ a{
     color: #ffffff;
 }
 header
-{     
-    background-image: url("123/roblox 1.png");
+{    background-color:#71dec1;
+     height: 90px;
+     width: 100%;  
+     background-image: url("123/roblox 1.png");
      height: 90px;
      width: 100%;   
 }
