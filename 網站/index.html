@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="style.css">
 <style>
 /* 原本的 CSS */
+
 .fade-in {
   opacity: 0;
   transition: opacity 0.3s ease-in;
@@ -17,6 +18,7 @@
 .fade-in.show {
   opacity: 1;
 }
+
 /* 新增的 CSS：針對手機螢幕設定樣式 */
 @media only screen and (max-width: 768px) {
   .fade-in {
@@ -50,9 +52,15 @@
       <p>2024 mojie zo</p>
     </footer>
 </main>
+
 <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const textElement = document.querySelector('.a p');
+    setTimeout(function() {
+      textElement.classList.add('show');
+    }, 2000);
+  });
 </script>
 </body>
 </html>
-
 
