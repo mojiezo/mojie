@@ -1,12 +1,6 @@
 * {
-    box-sizing: border-box;
-    padding: 0; /* 修改为 0 确保全局统一 */
-    margin: 0; /* 修改为 0 确保全局统一 */
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    padding: 10px; /* 添加 px 单位 */
+    margin: 10px; /* 添加 px 单位 */
 }
 
 header {
@@ -14,25 +8,40 @@ header {
     height: 90px;
     width: 100%;
     position: fixed;
-    top: 0;
-    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     box-sizing: border-box;
-    z-index: 1000;
 }
 
 header h1 {
     margin: 0;
-    font-size: 1.5em;
-    color: #fff;
+}
+
+footer {
+    background-color: rgb(129, 129, 235);
+    text-align: center;
+    padding: 20px;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+li {
+    display: inline;
+    margin-right: 4vw;
 }
 
 header nav ul {
     display: flex;
-    list-style: none;
+    list-style-type: none;
     margin: 0;
     padding: 0;
     transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
@@ -44,27 +53,6 @@ header nav ul {
 header nav ul.active {
     max-height: 500px; /* 展開時的最大高度 */
     opacity: 1;
-}
-
-header nav ul li {
-    margin: 0 10px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-header .menu {
-    display: none;
-}
-
-main {
-    padding-top: 100px; /* 确保内容不会被固定的导航栏遮挡 */
 }
 
 .a {
@@ -80,7 +68,6 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    text-align: center;
 }
 
 .b {
@@ -89,20 +76,8 @@ main {
     padding: 20px;
 }
 
-.b .social-links a {
-    margin: 0 10px;
-}
-
-.b .social-links img {
-    width: 50px;
-    height: 50px;
-}
-
-footer {
-    background-color: rgb(129, 129, 235);
-    text-align: center;
-    padding: 20px;
-    color: #fff;
+.menu {
+    display: none;
 }
 
 /* CSS 響應式設計 */
@@ -122,6 +97,7 @@ footer {
     }
 
     header nav ul li {
+        display: block;
         text-align: center;
         margin: 10px 0;
     }
