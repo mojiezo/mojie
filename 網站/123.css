@@ -14,7 +14,6 @@ a{
 header {
     height: 90px;
     width: 100%;
-    background-image: url("123/roblox 1.png");
 }
 @media only screen and (max-width: 768px) {
   .fade-in {
