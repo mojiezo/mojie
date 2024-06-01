@@ -29,7 +29,7 @@ h1{
     background-repeat: no-repeat;
     background-position: center;
     width:210px;
-    text-indent: -9999999999999999999999999999999999999999999999999999999999999999px;
+    text-indent:-9999999999999999999999999999999999999999999px;
 }
 li{
     display: inline;
