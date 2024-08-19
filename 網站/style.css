@@ -82,13 +82,23 @@ header ul{
 /* CSS 響應式設計 */
 @media screen and (max-width: 768px) {
     header ul {
-        display: none; /* 隱藏導航欄 */
+        display: none; /* 隱藏導航欄的列表項目 */
+    }
+
+    header {
+        background-color: #6a0dad; /* 保留紫色背景 */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px; /* 增加 padding 以確保導覽列看起來舒適 */
     }
 
     header h1 {
-        position: relative; /* 確保可以使用 left 進行定位 */
+        position: relative;
         left: 50%;
-        transform: translateX(-50%); /* 修正為 transform */
+        transform: translateX(-50%);
+        color: white; /* 確保 logo 是可見的 */
+        margin: 0; /* 移除多餘的 margin */
     }
 
     .b h2 {
@@ -102,9 +112,9 @@ header ul{
         font-size: 35px;
         position: absolute;
         top: 15px;
-        right: 20px; /* 改為右上角 */
+        right: 20px; /* 放置於右上角 */
         border: none;
         cursor: pointer;
-        z-index: 100; /* 確保在最上層 */
+        z-index: 100; /* 保證在最前面 */
     }
 }
