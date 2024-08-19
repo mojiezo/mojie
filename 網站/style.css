@@ -91,6 +91,8 @@ header ul{
         justify-content: space-between;
         align-items: center;
         padding: 10px 20px; /* 增加 padding 以確保導覽列看起來舒適 */
+        position: relative; /* 設置 position 為 relative 以確保 z-index 生效 */
+        z-index: 1000; /* 保證導覽欄在最上層 */
     }
 
     header h1 {
@@ -99,6 +101,7 @@ header ul{
         transform: translateX(-50%);
         color: white; /* 確保 logo 是可見的 */
         margin: 0; /* 移除多餘的 margin */
+        z-index: 1001; /* 確保 logo 在導覽欄上面 */
     }
 
     .b h2 {
@@ -115,6 +118,6 @@ header ul{
         right: 20px; /* 放置於右上角 */
         border: none;
         cursor: pointer;
-        z-index: 100; /* 保證在最前面 */
+        z-index: 1002; /* 確保菜單按鈕在所有元素上面 */
     }
 }
