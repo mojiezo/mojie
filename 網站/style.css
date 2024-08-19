@@ -82,25 +82,28 @@ header ul{
 /* CSS 響應式設計 */
 @media screen and (max-width: 768px) {
     header ul {
-    display:none;
-   }
+        display: none; /* 隱藏導航欄 */
+    }
 
-header h1{
-    left:50%;
-    transition-translateX(-50%);
+    header h1 {
+        position: relative; /* 確保可以使用 left 進行定位 */
+        left: 50%;
+        transform: translateX(-50%); /* 修正為 transform 而不是 transition-translateX */
+    }
+
+    .b h2 {
+        font-size: 40px; /* 調整標題字體大小 */
+    }
+
+    .menu {
+        display: block; 
+        background-color: transparent;
+        color: #ffffff;
+        font-size: 35px;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        border: none;
+        cursor: pointer;
+    }
 }
-.b h2{
-    font-size:40px;
-}
-.menu{
-     display:block; 
-     background-color: transparent;
-     color: #ffffff;
-     font-size: 35px;
-     position: absolute;
-     top: 15px;
-     left: 20px;
-     border:none;
-     cursor: pointer;
-}
-}   
