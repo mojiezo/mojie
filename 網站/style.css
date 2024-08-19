@@ -41,20 +41,38 @@ header ul{
     top:45px;
     line-height:40px;
 }
-.a{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-   background-color:aqua;
-   color:beige;
-   font-size:55px;
-   height:85vh;
-   background-image:url("123/螢幕擷取畫面 2024-04-07 204826.png");
-   background-repeat:no-repeat;
-   background-size:cover;
-   background-position: center;
+.a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    color: beige;
+    font-size: 55px;
+    height: 85vh;
+    background-image: url("123/螢幕擷取畫面 2024-04-07 204826.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative; /* 讓容器成為相對定位 */
 }
+
+.a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色遮罩 */
+    z-index: 0; /* 遮罩層級低於內容 */
+}
+
+.a > * {
+    position: relative;
+    z-index: 1; /* 確保文字內容在遮罩上方 */
+}
+
 .b{
     background-color: rgb(34, 0, 69);
 }
