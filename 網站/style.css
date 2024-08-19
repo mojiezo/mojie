@@ -88,7 +88,7 @@ header ul{
     header h1 {
         position: relative; /* 確保可以使用 left 進行定位 */
         left: 50%;
-        transform: translateX(-50%); /* 修正為 transform 而不是 transition-translateX */
+        transform: translateX(-50%); /* 修正為 transform */
     }
 
     .b h2 {
@@ -102,8 +102,9 @@ header ul{
         font-size: 35px;
         position: absolute;
         top: 15px;
-        left: 20px;
+        right: 20px; /* 改為右上角 */
         border: none;
         cursor: pointer;
+        z-index: 100; /* 確保在最上層 */
     }
 }
