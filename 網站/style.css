@@ -1,46 +1,58 @@
-*{
-    padding: 10;
-    margin: 10;
+/* 全局樣式 */
+* {
+    padding: 10px; /* 設置 padding 單位 */
+    margin: 10px; /* 設置 margin 單位 */
 }
-header
-{
-     background-color:rgba(102, 7, 107, 0.958);
-     height: 90px;
-     width: 100%;
-    Position:fixed;
+
+header {
+    background-color: rgba(102, 7, 107, 0.958); /* 紫色背景 */
+    height: 90px;
+    width: 100%;
+    position: fixed; /* 修正為小寫 */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* 確保 header 在最上層 */
 }
+
 footer {
     background-color: rgb(129, 129, 235);
 }
-a{
+
+a {
     color: #ffffff;
     text-decoration: none;
     width: 10%;
 }
-a:hover{
+
+a:hover {
     text-decoration: underline;
 }
-h1{
+
+h1 {
     color: #f3c8f8;
-    right:4vw;
-    top:45;
-    line-height:80px;
-    background-image:url(123/螢幕擷取畫面_2024-04-07_204053-removebg-preview.png);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 80px;
+    background-image: url('123/螢幕擷取畫面_2024-04-07_204053-removebg-preview.png'); /* 確保 URL 正確 */
     background-repeat: no-repeat;
     background-position: center;
-    width:210px;
-    text-indent:-9999999999999999999999999999999999999999999px;
+    width: 210px;
+    text-indent: -9999px; /* 修正 text-indent */
 }
-li{
+
+li {
     display: inline;
-    margin-right:4vw;
+    margin-right: 4vw;
 }
-header ul{
-    position:absolute;
-    right:5vw;
-    top:45px;
-    line-height:40px;
+
+header ul {
+    position: absolute;
+    right: 5vw;
+    top: 45px;
+    line-height: 40px;
 }
+
 .a {
     display: flex;
     flex-direction: column;
@@ -50,7 +62,7 @@ header ul{
     color: beige;
     font-size: 55px;
     height: 85vh;
-    background-image: url("123/螢幕擷取畫面 2024-04-07 204826.png");
+    background-image: url('123/螢幕擷取畫面 2024-04-07 204826.png'); /* 確保 URL 正確 */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -73,12 +85,14 @@ header ul{
     z-index: 1; /* 確保文字內容在遮罩上方 */
 }
 
-.b{
+.b {
     background-color: rgb(34, 0, 69);
 }
-.menu{  
-       display:none;
+
+.menu {
+    display: none;
 }
+
 /* CSS 響應式設計 */
 @media screen and (max-width: 768px) {
     header ul {
@@ -91,14 +105,10 @@ header ul{
         justify-content: space-between;
         align-items: center;
         padding: 10px 20px; /* 增加 padding 以確保導覽列看起來舒適 */
-        position: relative; /* 設置 position 為 relative 以確保 z-index 生效 */
         z-index: 1000; /* 保證導覽欄在最上層 */
     }
 
     header h1 {
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
         color: white; /* 確保 logo 是可見的 */
         margin: 0; /* 移除多餘的 margin */
         z-index: 1001; /* 確保 logo 在導覽欄上面 */
@@ -121,3 +131,4 @@ header ul{
         z-index: 1002; /* 確保菜單按鈕在所有元素上面 */
     }
 }
+
