@@ -18,6 +18,7 @@ footer {
     background-color: rgb(129, 129, 235);
 }
 
+
 a {
     color: #ffffff;
     text-decoration: none;
@@ -69,17 +70,6 @@ header ul {
     position: relative; /* 讓容器成為相對定位 */
 }
 
-.a::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色遮罩 */
-    z-index: 0; /* 遮罩層級低於內容 */
-}
-
 .a > * {
     position: relative;
     z-index: 1; /* 確保文字內容在遮罩上方 */
@@ -93,7 +83,6 @@ header ul {
     display: none;
 }
 
-/* CSS 響應式設計 */
 @media screen and (max-width: 768px) {
     header ul {
         display: none; /* 隱藏導航欄的列表項目 */
@@ -114,10 +103,6 @@ header ul {
         z-index: 1001; /* 確保 logo 在導覽欄上面 */
     }
 
-    .b h2 {
-        font-size: 40px; /* 調整標題字體大小 */
-    }
-
     .menu {
         display: block; 
         background-color: transparent;
@@ -131,4 +116,3 @@ header ul {
         z-index: 1002; /* 確保菜單按鈕在所有元素上面 */
     }
 }
-
