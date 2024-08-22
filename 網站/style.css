@@ -77,6 +77,20 @@ header ul {
 
 .b {
     background-color: rgb(34, 0, 69);
+    display: flex; /* 使用 flexbox 進行橫排排列 */
+    justify-content: center; /* 水平居中對齊 */
+    align-items: center; /* 垂直居中對齊 */
+    padding: 20px; /* 增加內邊距以防止圖片緊貼邊緣 */
+}
+
+.b a {
+    margin: 0 10px; /* 添加水平間距 */
+    flex-shrink: 0; /* 防止圖片被壓縮 */
+}
+
+.b img {
+    max-width: 100px; /* 設置圖片最大寬度 */
+    height: auto; /* 保持等比例縮放 */
 }
 
 .menu {
