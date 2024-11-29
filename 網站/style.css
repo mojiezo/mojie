@@ -1,50 +1,18 @@
 /* 全局樣式 */
 * {
-    padding: 10px; /* 設置 padding 單位 */
-    margin: 10px; /* 設置 margin 單位 */
+    padding: 10px; /* 基本內邊距 */
+    margin: 10px; /* 基本外邊距 */
 }
 
+/* 頁首樣式 */
 header {
     background-color: rgba(102, 7, 107, 0.958); /* 紫色背景 */
     height: 90px;
     width: 100%;
-    position: fixed; /* 修正為小寫 */
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000; /* 確保 header 在最上層 */
-}
-
-footer {
-    background-color: rgb(129, 129, 235);
-}
-
-
-a {
-    color: #ffffff;
-    text-decoration: none;
-    width: 10%;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-h1 {
-    color: #f3c8f8;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    line-height: 80px;
-    background-image: url('123/螢幕擷取畫面_2024-04-07_204053-removebg-preview.png'); /* 確保 URL 正確 */
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 210px;
-    text-indent: -9999px; /* 修正 text-indent */
-}
-
-li {
-    display: inline;
-    margin-right: 4vw;
+    z-index: 1000; /* 頁首在最上層 */
 }
 
 header ul {
@@ -54,6 +22,40 @@ header ul {
     line-height: 40px;
 }
 
+header h1 {
+    color: #f3c8f8;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 80px;
+    background-image: url('123/螢幕擷取畫面_2024-04-07_204053-removebg-preview.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 210px;
+    text-indent: -9999px;
+}
+
+/* 導航樣式 */
+li {
+    display: inline;
+    margin-right: 4vw;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 頁尾樣式 */
+footer {
+    background-color: rgb(129, 129, 235);
+}
+
+/* 主區塊樣式 */
 .a {
     display: flex;
     flex-direction: column;
@@ -63,70 +65,92 @@ header ul {
     color: beige;
     font-size: 55px;
     height: 85vh;
-    background-image: url('123/螢幕擷取畫面 2024-04-07 204826.png'); /* 確保 URL 正確 */
+    background-image: url('123/螢幕擷取畫面 2024-04-07 204826.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    position: relative; /* 讓容器成為相對定位 */
+    position: relative;
 }
 
 .a > * {
     position: relative;
-    z-index: 1; /* 確保文字內容在遮罩上方 */
+    z-index: 1;
 }
 
+/* 圖標容器樣式 */
 .b {
     background-color: rgb(34, 0, 69);
-    display: flex; /* 使用 flexbox 進行橫排排列 */
-    justify-content: center; /* 水平居中對齊 */
-    align-items: center; /* 垂直居中對齊 */
-    padding: 20px; /* 增加內邊距以防止圖片緊貼邊緣 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .b a {
-    margin: 0 10px; /* 添加水平間距 */
-    flex-shrink: 0; /* 防止圖片被壓縮 */
+    margin: 0 10px;
+    flex-shrink: 0;
 }
 
 .b img {
-    max-width: 100px; /* 設置圖片最大寬度 */
-    height: auto; /* 保持等比例縮放 */
+    max-width: 100px; /* 圖標寬度限制 */
+    height: auto; /* 等比例縮放 */
+    transition: transform 0.3s ease-in-out;
 }
 
+.b img:hover {
+    transform: scale(1.1); /* 放大效果 */
+}
+
+/* 漢堡菜單按鈕樣式 */
 .menu {
     display: none;
 }
 
+/* 手機視圖樣式 */
 @media screen and (max-width: 768px) {
     header ul {
-        display: none; /* 隱藏導航欄的列表項目 */
+        display: none; /* 隱藏導航欄的列表 */
     }
 
     header {
-        background-color: #6a0dad; /* 保留紫色背景 */
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 20px; /* 增加 padding 以確保導覽列看起來舒適 */
-        z-index: 1000; /* 保證導覽欄在最上層 */
+        padding: 10px 20px;
     }
 
     header h1 {
-        color: white; /* 確保 logo 是可見的 */
-        margin: 0; /* 移除多餘的 margin */
-        z-index: 1001; /* 確保 logo 在導覽欄上面 */
+        color: white;
+        margin: 0;
     }
 
     .menu {
-        display: block; 
+        display: block;
         background-color: transparent;
         color: #ffffff;
         font-size: 35px;
         position: absolute;
         top: 15px;
-        right: 20px; /* 放置於右上角 */
+        right: 20px;
         border: none;
         cursor: pointer;
-        z-index: 1002; /* 確保菜單按鈕在所有元素上面 */
+    }
+
+    .b {
+        flex-direction: column; /* 圖標縱向排列 */
+        padding: 10px;
+    }
+
+    .b img {
+        max-width: 60px; /* 圖標縮小 */
+        margin: 5px 0; /* 增加垂直間距 */
+    }
+}
+
+/* 超小屏幕樣式 */
+@media screen and (max-width: 480px) {
+    .b img {
+        max-width: 50px; /* 更小圖標 */
+        margin: 3px 0; /* 更小間距 */
     }
 }
