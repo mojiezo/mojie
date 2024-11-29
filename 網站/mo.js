@@ -1,3 +1,9 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const textElement = document.querySelector('.a p');
+    setTimeout(function() {
+      textElement.classList.add('show');
+    }, 2000);
+  });
 document.addEventListener("DOMContentLoaded", function () {
     const menuButton = document.querySelector(".menu");
     const navMenu = document.querySelector(".nav-menu");
